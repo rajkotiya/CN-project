@@ -25,14 +25,12 @@ class ChatConsumer(AsyncWebsocketConsumer):
         print('Disconnected!')
         
 
-    # Receive message from WebSocket
     async def receive(self, text_data):
         receive_dict = json.loads(text_data)
         peer_username = receive_dict['peer']
         action = receive_dict['action']
         message = receive_dict['message']
 
-        # print('unanswered_offers: ', self.unanswered_offers)
 
         print('Message received: ', message)
 
@@ -41,14 +39,11 @@ class ChatConsumer(AsyncWebsocketConsumer):
         print('self.channel_name: ', self.channel_name)
 
         if(action == 'new-offer') or (action =='new-answer'):
-            # in case its a new offer or answer
-            # send it to the new peer or initial offerer respectively
-
+       
             receiver_channel_name = receive_dict['message']['receiver_channel_name']
 
             print('Sending to ', receiver_channel_name)
 
-            # set new receiver as the current sender
             receive_dict['message']['receiver_channel_name'] = self.channel_name
 
             await self.channel_layer.send(
@@ -61,12 +56,8 @@ class ChatConsumer(AsyncWebsocketConsumer):
 
             return
 
-        # set new receiver as the current sender
-        # so that some messages can be sent
-        # to this channel specifically
         receive_dict['message']['receiver_channel_name'] = self.channel_name
 
-        # send to all peers
         await self.channel_layer.group_send(
             self.room_group_name,
             {
