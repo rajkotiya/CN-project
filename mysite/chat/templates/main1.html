@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<!-- {% load static %} -->
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Django Channels WebRTC</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">.
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+
+
+
+	<nav id="navbar">
+		<div id="first">
+			<h3 id="label-username">USERNAME</h3>
+		</div>
+	</nav>
+
+<section id="mainsection">
+	<section class="firstsection">
+		<section id="section-1">
+			<div class="user">
+				<input id="username"><button class="btn-join">Join Room</button>
+			</div>
+			<div class="main-grid-container">
+				<!-- for grid layout
+				assign class video-grad-layout -->
+				<div id="video-container">
+					<div>
+						<video id="local-video" style="float: left;" autoplay playsinline></video>
+					</div>
+				</div>
+		</section>
+
+
+
+
+
+		<section class="section-2">
+			<button id="btn-toggle-audio" class="btnbtn-dark">Audio Mute</button>
+			<button id="btn-toggle-video" class="btnbtn-dark">Video Off</button>
+			<button id="btn-share-screen" class="btnbtn-dark">Share Screen</button>
+
+			<button id="btn-record-screen" class="btnbtn-dark">Record Screen</button>
+
+			<button  id="share-file-button" class="btnbtn-dark">Share File</button>
+			<div id="select-file-dialog" style="display: none;">
+				<div id="dialog-content">
+					<div id="select-file">
+						<div id="label"   class="btnbtn-dark">Select a file:</div>
+						<input type="file" id="select-file-input">
+					</div>
+					<div id="dialog-footer">
+						<button id="ok-button"  class="btnbtn-dark" disabled>Ok</button>
+						<button id="cancel-button"  class="btnbtn-dark" class="cancel-button">Cancel</button>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+		</section>
+	</section>
+
+
+
+
+
+
+	<section class="secondsection">
+		<section class="section-3">
+			<div id="chat">
+				<h3> CHAT </h3>
+				<div id="messages">
+					<ul id="message-list"></ul>
+				</div>
+				<div id="ct"
+					><input id="msg"><button class="btn-join" id="btn-send-msg">Send</button>
+				</div>
+			</div>
+		</section>
+		<!-- {% block content %}
+		{% endblock %} -->
+
+	</section>
+</section>
+</body>
+</html>

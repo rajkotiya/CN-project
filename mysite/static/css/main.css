@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: #333 ;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.video-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: black;
+}
+
+.main-grid-container {
+    display: grid;
+    grid-template-columns: 60% 20%;
+}
+
+
+
+
+#navbar{
+    display: flex;
+    /* position: relative; */
+    justify-content: space-around;
+    align-items: center;
+    /* border-bottom: 2px solid #ccc; */
+    box-shadow: 0px 0px 11px rgba(0, 0, 0,0.1);
+    height: 80px;
+    top: 0;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+
+
+
+
+
+#mainsection{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* ----------------------------SECTION-1------------------------------------- */
+
+#section-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 160px;
+}
+.firstsection{
+    border-right: 4px double #333;
+
+}
+.user{
+    margin: 15px;
+}
+#username{
+    border: 1px solid #333;
+    padding: 2px;
+    margin: 5px;
+    width: 300px;
+}
+
+.btn-join{
+    border-radius: 3px;
+    margin: 5px;
+    font-size: 13px;
+    border: 2px solid #9b9b9b;
+    padding: 1px 9px;
+    background-color: #9b9b9b;
+    color: white;
+    cursor: pointer;
+}
+.btn-join:hover{
+    /* color: #333; */
+    background-color: #747474;
+}
+video {
+    width: 820px;
+    border-radius: 3%;
+    background-color: black;
+}
+
+
+
+
+/* ---------------------------SECTION-2--------------------------------------------- */
+
+.btnbtn-dark{
+    border: 2px solid #ff9696;
+    font-size: 12px;
+    padding: 7px 7px;
+    border-radius: 11px;
+    margin: 18px;
+    width: 112px;
+    font-size: 12px;
+    color: white;
+    background-color: tomato;
+    cursor: pointer;
+}
+
+.section-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnbtn-dark:hover{
+    box-shadow:inset 2px 4px 10px 2px rgba(0, 0, 0,0.1);
+    background-color:white;
+    color: #333;
+    /* font-size: 1.1rem; */
+    transform: scale(0.96);
+
+}
+
+
+
+
+/* ---------------------------------SECTION_3-------------------------------------- */
+
+
+
+.section-3{
+    margin: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#chat{
+    text-align: center;
+    border: 4px double #ff8181;
+    padding: 10px;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+#chat h3{
+    margin-right: 35px;
+}
+#msg{
+    width: 300px;
+}
